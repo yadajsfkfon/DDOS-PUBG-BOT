@@ -68,7 +68,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 If you have any questions or feedback, reach out via:
 
 - Telegram: [@all4outgaming1](https://t.me/all4outgaming1)
-- Instagram: [@all4outgaming](https://www.instagram.com/yogeshvivez)
+- Instagram: [@yogeshvibez](https://www.instagram.com/yogeshvibez)
 
 ---
 
