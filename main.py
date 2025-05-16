@@ -10,6 +10,92 @@ import datetime
 import logging
 import socket
 
+# ⚙️ UDP Flood Configuration Reference ⚙️
+#
+# 💻 GitHub Codespace (4-core EPYC 7763)
+# Threads: 200
+# Packet Size: 512–1024 bytes 🎯
+# Packets per loop: 5000 🔥
+#
+# 💻 GitHub Codespace (2-core EPYC 7763)
+# Threads: 100
+# Packet Size: 256–768 bytes ⚡
+# Packets per loop: 3000 ⚡
+#
+# 💻 Your Laptop (Intel i5-3317U, 2-core)
+# Threads: 50
+# Packet Size: 64–256 bytes 🐢
+# Packets per loop: 1000 🛡️
+#
+# 🧑‍💻 Google Colab CPU (usually 2–4 cores Intel Xeon)
+# Threads: 150
+# Packet Size: 512–1024 bytes 🚀
+# Packets per loop: 4000 ⚡
+#
+# 🖥️ Desktop CPU: Intel i7-9700K (8-core)
+# Threads: 250
+# Packet Size: 768–1500 bytes 💪
+# Packets per loop: 7000 🔥
+#
+# 🖥️ Desktop CPU: AMD Ryzen 9 5900X (12-core)
+# Threads: 300
+# Packet Size: 768–1500 bytes 💪
+# Packets per loop: 8000 🔥🔥
+#
+# 📱 Phone CPUs:
+#
+# Snapdragon 8 Gen 2 (8-core)
+# Threads: 20
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 500 🐾
+#
+# Snapdragon 8 Gen 1 (8-core)
+# Threads: 18
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 450 🐾
+#
+# Snapdragon 888 (8-core)
+# Threads: 15
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 400 🐾
+#
+# Snapdragon Exynos Lite (Midrange)
+# Threads: 12
+# Packet Size: 128–384 bytes 🐢
+# Packets per loop: 350 🐾
+#
+# Apple A17 Pro (6-core)
+# Threads: 25
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 600 🐾
+#
+# MediaTek Dimensity 9200+ (Top flagship)
+# Threads: 22
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 550 🐾
+#
+# MediaTek Dimensity 9200 (Flagship)
+# Threads: 20
+# Packet Size: 128–512 bytes ⚡
+# Packets per loop: 500 🐾
+#
+# MediaTek Dimensity 920 (Midrange)
+# Threads: 15
+# Packet Size: 64–256 bytes 🐢
+# Packets per loop: 300 🐾
+#
+# MediaTek Dimensity 6100+ (Budget)
+# Threads: 10
+# Packet Size: 64–128 bytes 🐢
+# Packets per loop: 200 🐾
+#
+# 📊 Notes:
+# - Threads = number of concurrent udp_flood threads
+# - Packet Size = range of packet sizes in bytes sent per packet
+# - Packets per loop = number of packets sent per loop inside udp_flood()
+# - Adjust these values based on your device's CPU, RAM, and network capacity
+
+
 # 🎛️ Function to install required packages
 def install_requirements():
     # Check if requirements.txt file exists
