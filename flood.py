@@ -145,9 +145,8 @@ import requests  # Needed for HTTP/HTTPS
 
 
 REMOTE_FLASK_NODES = [
-    "http://node1.yogeshvibez.dpdns.org:3000",
-    "http://node2.yogeshvibez.dpdns.org:3000",
-    "http://node3.yogeshvibez.dpdns.org:3000",
+    "http://node1.yogeshvibez.dpdns.org",
+    "http://node2.yogeshvibez.dpdns.org",
     # Add as many as you’ve hosted
 ]
 
